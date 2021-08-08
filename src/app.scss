@@ -1,0 +1,274 @@
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+@import 'variables';
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  overflow-y: overlay;
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+  height: 94vh;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+
+  .bg-text {
+    display: block;
+    position: absolute;
+    font-size: $bg-text;
+    opacity: 0.3;
+  }
+
+  .top-left {
+    top: $spacing-small;
+    left: $spacing-xlarge;
+  }
+  .top-right {
+    top: $spacing-small;
+    right: $spacing-xlarge;
+  }
+
+  .bottom-left {
+    bottom: $spacing-small;
+    left: $spacing-xlarge;
+  }
+  .bottom-right {
+    bottom: $spacing-small;
+    right: $spacing-xlarge;
+  }
+}
+
+.tinted {
+  background: $bg-tinted;
+}
+.white {
+  background: $bg-white;
+}
+
+/* HEADING */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  height: 6vh;
+  background: $secondary;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  div {
+    cursor: pointer;
+    color: $white;
+    font-size: $paragraph-small;
+    margin-right: $spacing-xlarge;
+  }
+}
+
+/* HEADING END */
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 6vh;
+  div {
+    flex: 1;
+  }
+
+  .name {
+    font-size: $paragraph-regular;
+    padding-left: $spacing-medium;
+  }
+  .social-icon__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin: 0 $spacing-medium;
+    }
+  }
+  .copyright__container {
+    text-align: center;
+    color: $light-gray;
+    font-size: $paragraph-small;
+  }
+}
+/* FOOTER END */
+
+/* TOP SECTION */
+.top {
+  grid-template-areas:
+    '. . . . . . .'
+    '. fullname fullname . position position .'
+    '. fullname fullname . position position .'
+    '. social . . . . .';
+}
+
+.title-fullname__container {
+  display: flex;
+  margin: 0;
+  grid-area: fullname;
+  align-items: center;
+
+  h1 {
+    font-size: $heading-regular;
+  }
+}
+
+.title-position__container {
+  display: flex;
+  margin: 0;
+  grid-area: position;
+  align-items: center;
+  h2 {
+    font-size: $heading-large;
+  }
+}
+
+.social-media__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: social;
+}
+
+.letter-pink {
+  color: $primary;
+}
+
+.letter-blue {
+  color: $secondary;
+}
+/* TOP SECTION END */
+
+/* WORK SECTION */
+.work {
+  grid-template-areas:
+    '. . . . . . .'
+    '. . . . item item .'
+    '. . . . item item .'
+    '. mockup . . . . .';
+}
+
+.featured-work-item__container {
+  grid-area: item;
+  width: 536px;
+  height: 536px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: $heading-regular;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: $paragraph-small;
+    margin-bottom: 0;
+  }
+
+  button {
+    align-self: center;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 3px solid $primary;
+    color: $primary;
+    font-size: $btn-regular;
+    font-weight: 700;
+    padding: 0;
+    margin: $spacing-xlarge;
+  }
+}
+
+.image__container {
+  grid-area: mockup;
+  width: 512px;
+}
+/* WORK SECTION END */
+/* TECH SECTION */
+.tech {
+  grid-template-areas:
+    '. . . . . . .'
+    '. list . . . . .'
+    '. . . . . . .'
+    '. . . . . . .';
+
+  .list-container {
+    grid-area: list;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 720px;
+    height: 516px;
+  }
+
+  .list-heading {
+    font-size: $heading-small;
+    color: $light-gray;
+  }
+
+  .tech-list {
+    list-style: none;
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0 $spacing-medium;
+    color: $gray;
+    font-size: $paragraph-regular;
+
+    li {
+      display: block;
+      width: 180px;
+      margin: 0;
+    }
+  }
+}
+/* TECH SECTION EMD */
+/* ABOUT SECTION */
+.about {
+  grid-template-areas:
+    '. . . . . . .'
+    '. . . . . intro .'
+    '. . . . . . .'
+    '. . . . . . .';
+
+  .intro-container {
+    grid-area: intro;
+    width: 654px;
+    font-size: $paragraph-regular;
+  }
+}
+/* ABOUT SECTION END */
+/* CONTACT SECTION */
+.contact__container {
+  width: 100vw;
+  height: 50vh;
+  background: $secondary;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: $paragraph-large;
+    text-align: center;
+  }
+  .contact-btn {
+    width: 240px;
+    height: 80px;
+    font-size: $paragraph-regular;
+    color: $white;
+    border: 3px solid $white;
+    background: none;
+  }
+}
+/* CONTACT SECTION END */
