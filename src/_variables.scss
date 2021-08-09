@@ -9,10 +9,16 @@ $bg-tinted: #f4f5f5;
 $bg-white: #ffffff;
 
 /* font-size */
+$bg-text-xsmall: 128px;
+$bg-text-small: 156px;
+$bg-text-medium: 256px;
 $bg-text: 356px;
 $heading-small: 24px;
+$heading-phone-medium: 36px;
+$heading-medium: 56px;
 $heading-regular: 72px;
 $heading-large: 144px;
+$paragraph-xsmall: 18px;
 $paragraph-small: 24px;
 $paragraph-regular: 36px;
 $paragraph-large: 64px;
@@ -23,3 +29,16 @@ $spacing-small: 8px;
 $spacing-medium: 16px;
 $spacing-large: 20px;
 $spacing-xlarge: 36px;
+
+/* window width */
+$laptop: 1400px;
+$laptop-small: 1144px;
+$tablet: 768px;
+$phone: 480px;
+$phone-small: 386px;
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

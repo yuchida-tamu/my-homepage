@@ -1,0 +1,129 @@
+@import 'variables';
+
+/* TOP SECTION */
+.top {
+  grid-template-areas:
+    '. . . . . . .'
+    '. fullname fullname . position position .'
+    '. fullname fullname . position position .'
+    '. social . . . . .';
+
+  .title-fullname__container {
+    display: flex;
+    margin: 0;
+    grid-area: fullname;
+    align-items: center;
+
+    h1 {
+      font-size: $heading-regular;
+    }
+  }
+
+  .title-position__container {
+    display: flex;
+    margin: 0;
+    grid-area: position;
+    align-items: center;
+    h2 {
+      font-size: $heading-large;
+    }
+  }
+
+  .social-media__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: social;
+  }
+
+  @media screen and (max-width: $laptop) {
+    .title-fullname__container {
+      justify-content: center;
+      h1 {
+        font-size: $heading-regular;
+      }
+    }
+
+    .title-position__container {
+      display: flex;
+      margin: 0;
+      grid-area: position;
+      align-items: center;
+      h2 {
+        font-size: $heading-regular;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    div {
+      flex: 1;
+    }
+
+    .title-fullname__container {
+      justify-content: center;
+
+      align-items: flex-end;
+      h1 {
+        font-size: $heading-medium;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+    }
+
+    .title-position__container {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: $heading-medium;
+        font-weight: 400;
+      }
+    }
+    .social-media__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        margin: $spacing-small;
+      }
+    }
+  }
+
+  @media screen and (max-width: $phone) {
+    .title-fullname__container {
+      justify-content: center;
+
+      align-items: flex-end;
+      h1 {
+        font-size: $heading-medium;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+    }
+
+    .title-position__container {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: $heading-phone-medium;
+        font-weight: 400;
+      }
+    }
+    .social-media__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        margin: $spacing-small;
+      }
+    }
+  }
+}

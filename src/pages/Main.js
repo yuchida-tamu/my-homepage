@@ -10,10 +10,10 @@ export const Main = () => {
   return (
     <>
       <Header />
-      <TopSection />
-      <WorkSection />
-      <TechSection />
-      <AboutSection />
+      <TopSection id="top" />
+      <WorkSection id="work" />
+      <TechSection id="tech" />
+      <AboutSection id="about" />
       <ContactSection />
       <Footer />
     </>

@@ -23,7 +23,7 @@ export const WorkSection = () => {
         </p>
         <p>I designed and developed this app with my cohort.</p>
 
-        <button>CHECK</button>
+        <button onClick={() => window.alert('clicked')}>CHECK</button>
       </div>
     </Section>
   );

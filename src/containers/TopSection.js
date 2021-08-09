@@ -49,9 +49,19 @@ export const TopSection = () => {
       </div>
       <div className="social-media__container">
         <IconContext.Provider value={{ size: '56px' }}>
-          <AiFillLinkedin />
-          <AiFillTwitterSquare />
-          <AiFillMail />
+          <a href="https://www.linkedin.com/in/yuta-uchida-76718316b/">
+            <AiFillLinkedin />
+          </a>
+          <a href="https://twitter.com/yuchida1992">
+            <AiFillTwitterSquare />
+          </a>
+          <a
+            href="mailto:yuchida4dev@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AiFillMail />
+          </a>
         </IconContext.Provider>
       </div>
     </Section>
