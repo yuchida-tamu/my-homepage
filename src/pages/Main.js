@@ -6,16 +6,20 @@ import { TechSection } from '../containers/TechSection';
 import { TopSection } from '../containers/TopSection';
 import { WorkSection } from '../containers/WorkSection';
 
+import { AnimatePresence } from 'framer-motion';
+
 export const Main = () => {
   return (
     <>
-      <Header />
-      <TopSection id="top" />
-      <WorkSection id="work" />
-      <TechSection id="tech" />
-      <AboutSection id="about" />
-      <ContactSection />
-      <Footer />
+      <AnimatePresence exitBeforeEnter>
+        <Header />
+        <TopSection id="top" />
+        <WorkSection id="work" />
+        <TechSection id="tech" />
+        <AboutSection id="about" />
+        <ContactSection />
+        <Footer />
+      </AnimatePresence>
     </>
   );
 };

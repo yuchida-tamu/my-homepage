@@ -5,65 +5,157 @@ import {
   AiFillTwitterSquare,
 } from 'react-icons/ai';
 import { Section } from '../components/section/Section';
+import { motion } from 'framer-motion';
+
+const transition = {
+  duration: 1,
+  ease: 'linear',
+};
+
+const letter = {
+  initial: {
+    y: -200,
+    opacity: 0,
+  },
+  animate: {
+    rotate: 360,
+    y: 0,
+    opacity: 1,
+    transition: { ...transition },
+  },
+  exit: {
+    rotate: 360,
+    y: 0,
+    opacity: 1,
+  },
+};
+
+const first = {
+  animate: {
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.1,
+      staggerDirection: 1,
+    },
+  },
+};
+
+const second = {
+  animate: {
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
+};
+
 export const TopSection = () => {
   return (
     <Section section="top" bgColor="white">
-      <div className="title-fullname__container">
-        <h1>
-          <span className="letter-pink">Y</span>
-          <span>U</span>
-          <span>T</span>
-          <span>A</span>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="title-fullname__container"
+      >
+        <motion.h1>
+          <motion.span variants={first}>
+            <motion.span variants={letter} className="letter-pink">
+              Y
+            </motion.span>
+            <motion.span variants={letter}>U</motion.span>
+            <motion.span variants={letter}>T</motion.span>
+            <motion.span variants={letter}>A</motion.span>
+          </motion.span>
           <span> </span>
-          <span className="letter-pink">U</span>
-          <span>C</span>
-          <span>H</span>
-          <span>I</span>
-          <span>D</span>
-          <span>A</span>
-        </h1>
-      </div>
-      <div className="title-position__container">
+          <motion.span variants={second}>
+            <motion.span variants={letter} className="letter-pink">
+              U
+            </motion.span>
+            <motion.span variants={letter}>C</motion.span>
+            <motion.span variants={letter}>H</motion.span>
+            <motion.span variants={letter}>I</motion.span>
+            <motion.span variants={letter}>D</motion.span>
+            <motion.span variants={letter}>A</motion.span>
+          </motion.span>
+        </motion.h1>
+      </motion.div>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="title-position__container"
+      >
         <h2>
-          <span className="position__first-chunk">
-            <span className="letter-blue">F</span>
-            <span>r</span>
-            <span>o</span>
-            <span>n</span>
-            <span>t</span>
-            <span>e</span>
-            <span>n</span>
-            <span>d</span>
-          </span>{' '}
-          <span className="position__second-chunk">
-            <span className="letter-blue">E</span>
-            <span>n</span>
-            <span>g</span>
-            <span>i</span>
-            <span>n</span>
-            <span>e</span>
-            <span>e</span>
-            <span>r</span>
-          </span>
+          <motion.span variants={first} className="position__first-chunk">
+            <motion.span variants={letter} className="letter-blue">
+              F
+            </motion.span>
+            <motion.span variants={letter}>r</motion.span>
+            <motion.span variants={letter}>o</motion.span>
+            <motion.span variants={letter}>n</motion.span>
+            <motion.span variants={letter}>t</motion.span>
+            <motion.span variants={letter}>e</motion.span>
+            <motion.span variants={letter}>n</motion.span>
+            <motion.span variants={letter}>d</motion.span>
+          </motion.span>{' '}
+          <motion.span variants={second} className="position__second-chunk">
+            <motion.span variants={letter} className="letter-blue">
+              E
+            </motion.span>
+            <motion.span variants={letter}>n</motion.span>
+            <motion.span variants={letter}>g</motion.span>
+            <motion.span variants={letter}>i</motion.span>
+            <motion.span variants={letter}>n</motion.span>
+            <motion.span variants={letter}>e</motion.span>
+            <motion.span variants={letter}>e</motion.span>
+            <motion.span variants={letter}>r</motion.span>
+          </motion.span>
         </h2>
-      </div>
-      <div className="social-media__container">
+      </motion.div>
+      <motion.div className="social-media__container">
         <IconContext.Provider value={{ size: '56px' }}>
-          <a href="https://www.linkedin.com/in/yuta-uchida-76718316b/">
+          <motion.a
+            animate={{ y: [0, -128, 0], rotate: [0, 360] }}
+            transition={{
+              delay: 0.2,
+              duration: 2,
+              east: 'linear',
+              repeatDelay: 1,
+            }}
+            href="https://www.linkedin.com/in/yuta-uchida-76718316b/"
+          >
             <AiFillLinkedin />
-          </a>
-          <a href="https://twitter.com/yuchida1992">
+          </motion.a>
+          <motion.a
+            animate={{ y: [0, -128, 0], rotate: [0, 360] }}
+            transition={{
+              delay: 0.6,
+              duration: 2,
+              east: 'linear',
+              repeatDelay: 1,
+            }}
+            href="https://twitter.com/yuchida1992"
+          >
             <AiFillTwitterSquare />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
+            animate={{ y: [0, -128, 0], rotate: [0, 720] }}
+            transition={{
+              delay: 1,
+              duration: 2,
+              east: 'linear',
+              repeatDelay: 1,
+            }}
             href="mailto:yuchida4dev@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             <AiFillMail />
-          </a>
+          </motion.a>
         </IconContext.Provider>
-      </div>
+      </motion.div>
     </Section>
   );
 };

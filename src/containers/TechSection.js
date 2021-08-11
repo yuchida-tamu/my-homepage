@@ -4,7 +4,7 @@ export const TechSection = () => {
   return (
     <Section
       bgPlacement="bottom-right"
-      bgText="TECH"
+      bgText="TOOLS"
       bgColor="white"
       color="pink"
       section="tech"

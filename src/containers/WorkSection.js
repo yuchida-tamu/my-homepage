@@ -1,6 +1,60 @@
+import { useLayoutEffect, createRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { Section } from '../components/section/Section';
 
 export const WorkSection = () => {
+  const imgControl = useAnimation();
+  const titleControl = useAnimation();
+  const pControl = useAnimation();
+  const ref = createRef();
+
+  const onScroll = () => {
+    const top = ref.current.getBoundingClientRect().top;
+    const bot = ref.current.getBoundingClientRect().bottom;
+    console.log('bot', bot);
+    const topBoundary = window.scrollY + window.innerHeight * 0.45;
+    const botBoundary = window.innerHeight * 0.5;
+    console.log('boundary', botBoundary);
+    if (top < topBoundary && bot > botBoundary) {
+      imgControl.start({
+        y: -75,
+        scale: 1.25,
+        opacity: 1,
+        transition: {
+          duration: 0.3,
+          ease: 'easeInOut',
+        },
+      });
+      titleControl.start({
+        x: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.7,
+        },
+      });
+      pControl.start({
+        opacity: 1,
+        transition: {
+          duration: 0.3,
+        },
+      });
+    } else {
+      imgControl.start({
+        y: 75,
+        scale: 1,
+        opacity: 0,
+        transition: {
+          duration: 0.3,
+        },
+      });
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <Section
       section="work"
@@ -8,22 +62,33 @@ export const WorkSection = () => {
       bgText="WORK"
       bgPlacement="top-left"
       color="blue"
+      ref={ref}
     >
-      <div className="image__container">
+      <motion.div
+        initial={{ scale: 1, opacity: 0 }}
+        animate={imgControl}
+        className="image__container"
+      >
         <img
           alt="mockup"
           src={require('../assets/workout-tracker__mockup.png').default}
         />
-      </div>
+      </motion.div>
       <div className="featured-work-item__container">
-        <h2>Workout Tracker</h2>
-        <p>
+        <motion.h2 initial={{ opacity: 0, x: 1000 }} animate={titleControl}>
+          Workout Tracker
+        </motion.h2>
+        <motion.p initial={{ opacity: 0 }} animate={pControl}>
           Workout management web applicattion, with which you can keep record of
           your exercise routine, and keep track of your progress.
-        </p>
-        <p>I designed and developed this app with my cohort.</p>
+        </motion.p>
+        <motion.p initial={{ opacity: 0 }} animate={pControl}>
+          I designed and developed this app with my cohort.
+        </motion.p>
 
-        <button onClick={() => window.alert('clicked')}>CHECK</button>
+        <button>
+          <a href="#">CHECK</a>
+        </button>
       </div>
     </Section>
   );

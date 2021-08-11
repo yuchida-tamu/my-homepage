@@ -31,7 +31,7 @@ a {
   .bg-text {
     display: block;
     position: absolute;
-    z-index: -100;
+    z-index: 0;
     font-size: $bg-text;
     opacity: 0.3;
   }
@@ -262,7 +262,7 @@ a {
     margin: 0;
     grid-area: fullname;
     align-items: center;
-
+    z-index: 1000;
     h1 {
       font-size: $heading-regular;
     }
@@ -273,6 +273,7 @@ a {
     margin: 0;
     grid-area: position;
     align-items: center;
+    z-index: 1000;
     h2 {
       font-size: $heading-large;
     }
@@ -283,6 +284,20 @@ a {
     align-items: center;
     justify-content: space-between;
     grid-area: social;
+    z-index: 1000;
+    a {
+      transition: 0.1s;
+      svg {
+        transition: 0.3s;
+      }
+    }
+
+    a:hover {
+      color: $primary;
+      svg {
+        transform: translateY(-24px) scale(1.2);
+      }
+    }
   }
 
   @media screen and (max-width: $laptop) {
@@ -406,6 +421,8 @@ a {
   .image__container {
     grid-area: mockup;
     width: 512px;
+
+    z-index: 500;
   }
 
   .featured-work-item__container {
@@ -414,6 +431,8 @@ a {
     height: 80vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    z-index: 1000;
     h2 {
       font-size: $heading-regular;
       font-weight: 400;
@@ -427,6 +446,7 @@ a {
     }
 
     button {
+      cursor: pointer;
       align-self: center;
       margin: $spacing-large;
       width: 88px;
@@ -438,6 +458,24 @@ a {
       font-weight: 700;
       padding: 0;
       background: none;
+      transition: 0.3s;
+      a,
+      a:link,
+      a:visited,
+      a:active {
+        color: $primary;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background: $primary;
+        transform: scale(1.1);
+        box-shadow: 0 4px 16px 2px $gray;
+        a {
+          color: $white;
+          letter-spacing: 0.15em;
+        }
+      }
     }
   }
 
@@ -573,6 +611,7 @@ a {
     '. . . . . . .'
     '. . . . . . .';
 
+  z-index: 1000;
   .list-container {
     grid-area: list;
     display: flex;
@@ -654,6 +693,7 @@ a {
     grid-area: intro;
     width: 654px;
     font-size: $paragraph-regular;
+    z-index: 1000;
   }
 
   @media screen and (max-width: $tablet) {
@@ -684,17 +724,37 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
   h2 {
     font-size: $paragraph-large;
     text-align: center;
   }
   .contact-btn {
+    cursor: pointer;
     width: 240px;
     height: 80px;
     font-size: $paragraph-regular;
     color: $white;
     border: 3px solid $white;
     background: none;
+    transition: 0.3s;
+
+    a,
+    a:link,
+    :active,
+    a:visited {
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background: $white;
+
+      transform: scale(1.1);
+      a {
+        color: $secondary;
+      }
+    }
   }
 
   @media screen and (max-width: $laptop) {
