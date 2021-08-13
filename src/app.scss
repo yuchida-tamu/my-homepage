@@ -159,6 +159,7 @@ a {
 
 .compact-menu {
   position: fixed;
+  margin-top: $spacing-xlarge;
   @include center;
   width: 317px;
   height: 612px;
