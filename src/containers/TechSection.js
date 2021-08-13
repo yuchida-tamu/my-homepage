@@ -52,7 +52,7 @@ export const TechSection = () => {
         exit="exit"
         className="list-container"
       >
-        <motion.div>
+        <div>
           <h3 className="list-heading">LANGUAGE</h3>
           <motion.ul className="tech-list language">
             {language.map((item, i) => (
@@ -66,7 +66,7 @@ export const TechSection = () => {
               </motion.li>
             ))}
           </motion.ul>
-        </motion.div>
+        </div>
         <div>
           <h3 className="list-heading">DB</h3>
           <motion.ul className="tech-list db">

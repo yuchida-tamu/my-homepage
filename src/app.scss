@@ -581,7 +581,13 @@ a {
       width: 80%;
       h2 {
         margin: 0;
+        font-size: $heading-small;
+        font-weight: 400;
         text-align: center;
+      }
+      p {
+        font-size: $paragraph-xsmall;
+        width: 90%;
       }
       button {
         transform: scale(0.8);
@@ -664,6 +670,9 @@ a {
   }
 
   @media screen and (max-width: $phone) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .list-container {
       .list-heading {
         text-align: center;
@@ -674,7 +683,7 @@ a {
         li {
           text-align: center;
           font-weight: 400;
-          font-size: $paragraph-small;
+          font-size: $paragraph-xsmall;
         }
       }
     }
