@@ -83,7 +83,8 @@ export const WorkSection = () => {
           your exercise routine, and keep track of your progress.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={pControl}>
-          I designed and developed this app with my cohort.
+          Currently, it is still a work-in-progress project. My cohort and I are
+          designing and developing the app, looking to publish it this year.
         </motion.p>
 
         <button>

@@ -1,4 +1,4 @@
-import { useLayoutEffect, createRef, useState } from 'react';
+import { useLayoutEffect, createRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Section } from '../components/section/Section';
 

@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 export const Nav = () => (
   <nav className="header__navigation">
     <ul>
