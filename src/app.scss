@@ -662,10 +662,12 @@ a {
 
     .list-container {
       display: flex;
+      flex-direction: column;
       align-items: center;
       height: 100%;
       backdrop-filter: blur(4px);
       margin-top: $spacing-xlarge;
+      font-size: $paragraph-xsmall;
     }
   }
 
@@ -683,6 +685,24 @@ a {
         li {
           text-align: center;
           font-weight: 400;
+          font-size: $paragraph-xsmall;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $phone-small) {
+    .list-container {
+      .list-heading {
+        text-align: center;
+        margin: $spacing-small;
+        font-size: $heading-small;
+        font-weight: 400;
+      }
+      .tech-list {
+        li {
+          text-align: center;
+          font-weight: 300;
           font-size: $paragraph-xsmall;
         }
       }
