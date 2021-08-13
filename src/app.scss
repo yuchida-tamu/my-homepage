@@ -550,7 +550,7 @@ a {
     justify-content: flex-start;
     .image__container {
       align-self: center;
-      width: auto;
+      width: 100vw;
       height: 160px;
       flex: 0.5;
       display: flex;
@@ -662,6 +662,7 @@ a {
     align-items: center;
 
     .list-container {
+      width: 100vw;
       display: flex;
       flex-direction: column;
       align-items: center;
