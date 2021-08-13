@@ -676,10 +676,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
     .list-container {
       .list-heading {
         text-align: center;
-        margin: $spacing-small;
+        margin: 0;
         font-size: $paragraph-small;
         font-weight: 400;
       }
