@@ -679,13 +679,14 @@ a {
     .list-container {
       .list-heading {
         text-align: center;
-        margin: $spacing-medium;
-        font-weight: 300;
+        margin: $spacing-small;
+        font-size: $paragraph-small;
+        font-weight: 400;
       }
       .tech-list {
         li {
           text-align: center;
-          font-weight: 400;
+          font-weight: 300;
           font-size: $paragraph-xsmall;
         }
       }
