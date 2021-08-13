@@ -99,9 +99,9 @@ export const WorkSection = () => {
           designing and developing the app, looking to publish it this year.
         </motion.p>
 
-        <button>
-          <a href="#">CHECK</a>
-        </button>
+        {/* <button>
+        <a href="#">CHECK</a>
+      </button> */}
       </div>
     </Section>
   );
