@@ -16,15 +16,27 @@ export const WorkSection = () => {
     const botBoundary = window.innerHeight * 0.5;
 
     if (top < topBoundary && bot > botBoundary) {
-      imgControl.start({
-        y: -75,
-        scale: 1.25,
-        opacity: 1,
-        transition: {
-          duration: 0.3,
-          ease: 'easeInOut',
-        },
-      });
+      if (window.innerWidth > 680) {
+        imgControl.start({
+          y: -75,
+          scale: 1.25,
+          opacity: 1,
+          transition: {
+            duration: 0.3,
+            ease: 'easeInOut',
+          },
+        });
+      } else {
+        imgControl.start({
+          y: 0,
+          scale: 1.1,
+          opacity: 1,
+          transition: {
+            duration: 0.3,
+            ease: 'easeInOut',
+          },
+        });
+      }
       titleControl.start({
         x: 0,
         opacity: 1,
