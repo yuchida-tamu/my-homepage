@@ -23,11 +23,6 @@ const letter = {
     opacity: 1,
     transition: { ...transition },
   },
-  exit: {
-    rotate: 360,
-    y: 0,
-    opacity: 1,
-  },
 };
 
 const first = {

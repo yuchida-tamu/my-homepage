@@ -11,10 +11,10 @@ export const WorkSection = () => {
   const onScroll = () => {
     const top = ref.current.getBoundingClientRect().top;
     const bot = ref.current.getBoundingClientRect().bottom;
-    console.log('bot', bot);
+
     const topBoundary = window.scrollY + window.innerHeight * 0.45;
     const botBoundary = window.innerHeight * 0.5;
-    console.log('boundary', botBoundary);
+
     if (top < topBoundary && bot > botBoundary) {
       imgControl.start({
         y: -75,
