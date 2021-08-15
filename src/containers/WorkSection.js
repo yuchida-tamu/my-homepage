@@ -91,12 +91,13 @@ export const WorkSection = () => {
           Workout Tracker
         </motion.h2>
         <motion.p initial={{ opacity: 0 }} animate={pControl}>
-          Workout management web applicattion, with which you can keep record of
-          your exercise routine, and keep track of your progress.
+          An app designed for Workout Management- you can keep record of your
+          exercise routine, and keep track of your progress.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={pControl}>
-          Currently, it is still a work-in-progress project. My cohort and I are
-          designing and developing the app, looking to publish it this year.
+          Currently, this project is still a work-in-progress. My cohort and I
+          are designing and developing the app, and looking to publish it this
+          year.
         </motion.p>
 
         {/* <button>
