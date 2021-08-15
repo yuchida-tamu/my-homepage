@@ -663,6 +663,7 @@ a {
     flex-wrap: nowrap;
     .list-container {
       width: 100vw;
+      height: fit-content;
       .list-heading {
         text-align: center;
         margin: 0;
