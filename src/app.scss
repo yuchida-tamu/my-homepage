@@ -658,18 +658,24 @@ a {
 
   @media screen and (max-width: $tablet) {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
+    flex-wrap: nowrap;
     .list-container {
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-      backdrop-filter: blur(4px);
-      margin-top: $spacing-xlarge;
-      font-size: $paragraph-xsmall;
+      .list-heading {
+        text-align: center;
+        margin: 0;
+        font-size: $paragraph-small;
+        font-weight: 400;
+      }
+      .tech-list {
+        margin: $spacing-small;
+        li {
+          text-align: center;
+          font-weight: 300;
+          font-size: $paragraph-xsmall;
+        }
+      }
     }
   }
 
