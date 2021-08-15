@@ -131,7 +131,7 @@ export const TopSection = () => {
               east: 'linear',
               repeatDelay: 1,
             }}
-            href="https://twitter.com/yuchida1992"
+            href="https://twitter.com/yuchida4dev"
           >
             <AiFillTwitterSquare />
           </motion.a>

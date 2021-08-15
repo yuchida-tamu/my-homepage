@@ -15,7 +15,7 @@ export const Footer = () => {
           <a href="https://www.linkedin.com/in/yuta-uchida-76718316b/">
             <AiFillLinkedin />
           </a>
-          <a href="https://twitter.com/yuchida1992">
+          <a href="https://twitter.com/yuchida4dev">
             <AiFillTwitterSquare />
           </a>
           <a
