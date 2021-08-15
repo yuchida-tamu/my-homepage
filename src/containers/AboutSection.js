@@ -37,9 +37,10 @@ export const AboutSection = () => {
     >
       <div className="intro-container">
         <motion.p initial={{ opacity: 0 }} animate={control}>
-          Yuta Uchida is frontend engineer, who has visual art background. He is
-          passonate about generating and materializing creative ideas. He is
-          eager to grow and keep on providing better services.
+          Yuta Uchida is a frontend engineer with a visual art background. An
+          eager learner, he continues to grow so he can provide excellent
+          services. He is passionate about generating and materialising creative
+          ideas, while finding solutions where others might not think to look.
         </motion.p>
       </div>
     </Section>
