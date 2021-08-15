@@ -662,18 +662,20 @@ a {
     align-items: center;
     flex-wrap: nowrap;
     .list-container {
+      width: 100vw;
       .list-heading {
         text-align: center;
         margin: 0;
-        font-size: $paragraph-small;
+        font-size: $paragraph-regular;
         font-weight: 400;
       }
       .tech-list {
         margin: $spacing-small;
         li {
           text-align: center;
+          margin: 0 auto;
           font-weight: 300;
-          font-size: $paragraph-xsmall;
+          font-size: $paragraph-small;
         }
       }
     }
